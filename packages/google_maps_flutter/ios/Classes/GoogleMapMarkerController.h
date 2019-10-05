@@ -28,6 +28,9 @@
 - (instancetype)initMarkerWithPosition:(CLLocationCoordinate2D)position
                               markerId:(NSString*)markerId
                                mapView:(GMSMapView*)mapView;
+- (void)showInfoWindow;
+- (void)hideInfoWindow;
+- (BOOL)isInfoWindowShown;
 - (BOOL)consumeTapEvents;
 - (void)removeMarker;
 @end
@@ -42,4 +45,7 @@
 - (BOOL)onMarkerTap:(NSString*)markerId;
 - (void)onMarkerDragEnd:(NSString*)markerId coordinate:(CLLocationCoordinate2D)coordinate;
 - (void)onInfoWindowTap:(NSString*)markerId;
+- (void)showMarkerInfoWindow:(NSString*)markerId;
+- (void)hideMarkerInfoWindow:(NSString*)markerId;
+- (BOOL)isMarkerInfoWindowShown:(NSString*)markerId;
 @end
